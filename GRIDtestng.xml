@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GRID SAMPLE TEST" parallel="tests" thread-count="3" >
+
+<listeners>
+		<listener class-name="com.utilities.pkg.ListenerClass" />
+	</listeners>
+	
+  <test name="GRID TEST WITH Parallel EXECTION WITH BROWSER chrome">
+   <parameter name ="browserType" value="chrome"/>  
+    <classes>
+      <class name="regression.NewTest"/>
+    </classes>
+  </test> 
+  
+  <test name="GRID TEST WITH Parallel EXECTION WITH BROWSER FF">
+   <parameter name ="browserType" value="firefox"/>  
+    <classes>
+      <class name="regression.NewTest"/>
+    </classes>
+  </test> 
+  
+</suite> 
